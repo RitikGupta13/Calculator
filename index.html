@@ -4,29 +4,38 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Simple Calculator</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-<div class="calculator">
-	<div class="display">0</div>
-	<div class="buttons">
-		<button>7</button>
-		<button>8</button>
-		<button>9</button>
-		<button>/</button>
-		<button>4</button>
-		<button>5</button>
-		<button>6</button>
-		<button>*</button>
-		<button>1</button>
-		<button>2</button>
-		<button>3</button>
-		<button>-</button>
-		<button>0</button>
-		<button>.</button>
-		<button>=</button>
-		<button>+</button>
-	</div>
+<div class="Container">
+	<input
+	class="display"
+	type="text"
+	id="input1"
+	placeholder="Enter your number"
+	/>
+	<button class="button" onclick="getOperation(this)" data-op="+">+</button>
+	<button class="button" onclick="getOperation(this)" data-op="-">-</button>
+	<button class="button" onclick="getOperation(this)" data-op="*">*</button>
+	<button class="button" onclick="getOperation(this)" data-op="/">/</button>
+
+	<button class="button" onclick="getNumber(this)">7</button>
+	<button class="button" onclick="getNumber(this)">8</button>
+	<button class="button" onclick="getNumber(this)">9</button>
+	<button class="button" onclick="clearDisplay()" id="clear">C</button>
+
+	<button class="button" onclick="getNumber(this)">4</button>
+	<button class="button" onclick="getNumber(this)">5</button>
+	<button class="button" onclick="getNumber(this)">6</button>
+
+	<button class="button" onclick="getNumber(this)">1</button>
+	<button class="button" onclick="getNumber(this)">2</button>
+	<button class="button" onclick="getNumber(this)">3</button>
+	<button class="button" onclick="runCalculator()" id="equals">=</button>
+
+	<button class="button" onclick="getNumber(this)">0</button>
+	<button class="button" onclick="getNumber(this)">.</button>
 </div>
+<script src="index.js"></script>
 </body>
 </html>
